@@ -24,4 +24,5 @@ if __name__ == "__main__":
     llm = ChatOpenAI(temperature=0,model_name="gpt-3.5-turbo")
     chain=LLMChain(llm=llm,prompt=summary_prompt_template)
     res=chain.invoke(input={"information":linkedIn_data})
+
     print(res)
